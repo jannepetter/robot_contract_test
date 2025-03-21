@@ -1,0 +1,29 @@
+name: Main workflow
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches: ["master"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install rcc
+        run: |
+          curl -o rcc https://downloads.robocorp.com/rcc/releases/v17.28.4/linux64/rcc
+          chmod a+x rcc
+          sudo mv rcc /usr/local/bin/
+
+      - name: Run tests
+        run: rcc task run -t Test
+
+      - name: Run Contract tests
+        run: rcc task run -t Contract
