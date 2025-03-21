@@ -1,0 +1,182 @@
+I, [2025-03-21T20:57:38.259550 #25254]  INFO -- : Cleared interactions
+I, [2025-03-21T20:57:38.262194 #25254]  INFO -- : Registered expected interaction GET /users/
+D, [2025-03-21T20:57:38.262572 #25254] DEBUG -- : {
+  "description": "a request for users",
+  "providerState": "all users",
+  "request": {
+    "method": "get",
+    "path": "/users/"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "name": "Sample User",
+        "username": "sample_user",
+        "email": "sample@user.com",
+        "address": {
+          "street": "Elm Street",
+          "suite": "Apt. 789",
+          "city": "Springfield",
+          "zipcode": "12345-6789",
+          "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+          }
+        },
+        "phone": "1-555-123-4567 x98765",
+        "website": "example.com",
+        "company": {
+          "name": "TechFusion Inc.",
+          "catchPhrase": "Innovating the future of technology",
+          "bs": "empower digital transformation solutions"
+        }
+      },
+      "min": 3
+    }
+  },
+  "metadata": null
+}
+I, [2025-03-21T20:57:38.264494 #25254]  INFO -- : Received request GET /users/
+D, [2025-03-21T20:57:38.264832 #25254] DEBUG -- : {
+  "path": "/users/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-03-21T20:57:38.265110 #25254]  INFO -- : Found matching response for GET /users/
+D, [2025-03-21T20:57:38.265208 #25254] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "name": "Sample User",
+      "username": "sample_user",
+      "email": "sample@user.com",
+      "address": {
+        "street": "Elm Street",
+        "suite": "Apt. 789",
+        "city": "Springfield",
+        "zipcode": "12345-6789",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-555-123-4567 x98765",
+      "website": "example.com",
+      "company": {
+        "name": "TechFusion Inc.",
+        "catchPhrase": "Innovating the future of technology",
+        "bs": "empower digital transformation solutions"
+      }
+    },
+    "min": 3
+  }
+}
+I, [2025-03-21T20:57:38.266716 #25254]  INFO -- : Verifying - interactions matched
+I, [2025-03-21T20:57:38.268355 #25254]  INFO -- : Writing pact for JsonPlaceholder to /home/janne/projects/robodrill/testapp-jsonplaceholder.json
+I, [2025-03-21T20:57:38.271305 #25254]  INFO -- : Cleared interactions
+I, [2025-03-21T20:57:38.273238 #25254]  INFO -- : Registered expected interaction GET /users/1
+D, [2025-03-21T20:57:38.273594 #25254] DEBUG -- : {
+  "description": "a request for specific user",
+  "providerState": "specific user",
+  "request": {
+    "method": "get",
+    "path": "/users/1"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "id": 1,
+        "name": "Sample User",
+        "username": "sample_user",
+        "email": "sample@user.com",
+        "address": {
+          "street": "Elm Street",
+          "suite": "Apt. 789",
+          "city": "Springfield",
+          "zipcode": "12345-6789",
+          "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+          }
+        },
+        "phone": "1-555-123-4567 x98765",
+        "website": "example.com",
+        "company": {
+          "name": "TechFusion Inc.",
+          "catchPhrase": "Innovating the future of technology",
+          "bs": "empower digital transformation solutions"
+        }
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2025-03-21T20:57:38.276113 #25254]  INFO -- : Received request GET /users/1
+D, [2025-03-21T20:57:38.276361 #25254] DEBUG -- : {
+  "path": "/users/1",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-03-21T20:57:38.276517 #25254]  INFO -- : Found matching response for GET /users/1
+D, [2025-03-21T20:57:38.276668 #25254] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "id": 1,
+      "name": "Sample User",
+      "username": "sample_user",
+      "email": "sample@user.com",
+      "address": {
+        "street": "Elm Street",
+        "suite": "Apt. 789",
+        "city": "Springfield",
+        "zipcode": "12345-6789",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-555-123-4567 x98765",
+      "website": "example.com",
+      "company": {
+        "name": "TechFusion Inc.",
+        "catchPhrase": "Innovating the future of technology",
+        "bs": "empower digital transformation solutions"
+      }
+    }
+  }
+}
+I, [2025-03-21T20:57:38.278801 #25254]  INFO -- : Verifying - interactions matched
+I, [2025-03-21T20:57:38.281086 #25254]  INFO -- : Writing pact for JsonPlaceholder to /home/janne/projects/robodrill/testapp-jsonplaceholder.json
