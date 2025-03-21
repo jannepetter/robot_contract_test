@@ -10,7 +10,7 @@ on:
     branches: ["master"]
 
 jobs:
-  test:
+  test-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,3 +27,11 @@ jobs:
 
       - name: Run Contract tests
         run: rcc task run -t Contract
+    
+      - name: Push to control room
+        if: github.event_name == 'push'
+        run: |
+          rcc robot wrap
+          rcc configure credentials ${{ secrets.ACCESS_CREDENTIALS }}
+          rcc cloud push -r ${{ secrets.ROBOT_ID }} -w ${{ secrets.WORKSPACE_ID }}
+          
