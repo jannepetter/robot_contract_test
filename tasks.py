@@ -3,6 +3,8 @@ import requests
 
 BASE_URL = "https://jsonplaceholder.typicode.com/users/"
 
+# v0.1
+
 
 def user(id):
     """Fetch a user object by user_name from the server."""

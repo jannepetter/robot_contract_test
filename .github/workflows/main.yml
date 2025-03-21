@@ -32,6 +32,6 @@ jobs:
         if: github.event_name == 'push'
         run: |
           rcc robot wrap
-          rcc configure credentials ${{ secrets.ACCESS_CREDENTIALS }}
+          rcc configure credentials --silent ${{ secrets.ACCESS_CREDENTIALS }}
           rcc cloud push -r ${{ secrets.ROBOT_ID }} -w ${{ secrets.WORKSPACE_ID }}
           
